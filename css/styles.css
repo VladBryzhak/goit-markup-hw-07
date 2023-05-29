@@ -92,7 +92,7 @@ img {
     display: flex;
     margin-right: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -251,26 +251,93 @@ img {
     margin-bottom: 48px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 496px;
+    max-width: 320px;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--white);
     text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+    .main-title {
+        margin-bottom: 36px;
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .main-title {
+        margin-bottom: 48px;
+    }
+}
+
 .hero-section {
-    padding: 188px 0;
+    padding: 112px 0;
     margin-left: auto;
     margin-right: auto;
     max-width: 1440px;
     background-color: var(--navy-blue);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
-            url(../images/index/hero-section/hero-bg.jpg);
+            url(../images/index/hero-section/hero_mob@1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media screen and (min-width: 1158px) {
+    .hero-section{
+        padding: 188px 0;
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/index/hero-section/hero_mob@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 429px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/index/hero-section/hero_tab@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/index/hero-section/hero_tab@2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/index/hero-section/hero_desk@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/index/hero-section/hero_desk@2x.jpg);
+        }
+    }
 }
 
 .os-btn {
@@ -290,6 +357,7 @@ img {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
     transition: background-color var(--transition-func-and-dur);
 }
 
@@ -300,27 +368,48 @@ img {
     border-radius: 4px;
 }
 
-
-
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
+}
+@media screen and (min-width: 1128px) {
+    .section {
+        padding: 120px 0;
+    }
 }
 
-.about {
-    padding-top: 0;
-}
 /* Features */
 .features-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
-.features-list-item {
-    width: calc((100%-24px * 3) / 4);
+@media screen and (min-width: 768px) {
+    .features-list {
+        gap: 72px 24px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .features-list {
+        gap: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .advantages-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .advantages-list-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
 
 .features-icon-container{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 112px;
@@ -328,6 +417,12 @@ img {
     
     background-color: var(--cloud);
     border-radius: 4px;
+}
+
+@media screen and (min-width: 1158px) {
+    .features-icon-container {
+        display: flex;
+    }
 }
 
 .title {
@@ -341,6 +436,10 @@ img {
     text-align: center;
 }
 /* About */
+.about {
+    padding-top: 0;
+}
+
 .title-hidden {
     position: absolute;
     width: 1px;
