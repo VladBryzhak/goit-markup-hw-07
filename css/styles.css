@@ -46,6 +46,8 @@ p {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .link {
@@ -53,9 +55,23 @@ img {
 }
 
 .container {
-    width: 1158px;
+    min-width: 320px;
+    max-width: 428px;
+    padding: 0 16px;
     margin: 0 auto;
-    padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
 }
 
 /* Header */
@@ -69,16 +85,25 @@ img {
 
 .header-container {
     display: flex;
+    align-items: center;
 }
 
 .page-nav {
     display: flex;
     margin-right: auto;
     align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .page-nav {
+        width: 100%;
+    }
 }
 
 .web-studio-link {
-    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 22px;
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -96,8 +121,31 @@ img {
     color: var(--cloud);
 }
 
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-right: 120px;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .logo {
+        margin-right: 76px;
+    }
+}
+
+.burger-btn {
+    stroke: var(--navy-blue);
+}
+
 .header-nav-list {
     display: flex;
+}
+
+@media screen and (max-width: 767px) {
+    .header-nav-list {
+        display: none;
+    }
 }
 
 .nav-item {
@@ -144,25 +192,51 @@ img {
 
 .address {
     display: flex;
-
     font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+    .address {
+        display: none;
+    }
 }
 
 .adr-list {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 12px;
+    font-style: normal;
+}
+
+@media screen and (min-width: 1158px) {
+    .adr-list {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 0;
+    }
 }
 
 .contact-link {
     display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    padding-top: 0;
+    padding-bottom: 0;
     color: var(--slate);
-
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
     transition: color var(--transition-func-and-dur);
+}
+
+@media screen and (min-width: 1158px) {
+    .contact-link {
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
 }
 
 .contact-link:hover,
