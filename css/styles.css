@@ -122,14 +122,14 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    .logo {
+    .web-studio-link {
         margin-right: 120px;
         padding-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    .logo {
+    .web-studio-link {
         margin-right: 76px;
     }
 }
